@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star.ID Konveksi - Konveksi Berkualitas di Semarang</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: false      // Animation happens only once on scroll
+    });
+  </script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="assets/logo-removebg-preview2.png" alt="Star.ID Icon">
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#order-process">Proses Order</a></li>
+                    <li><a href="#packages">Paket</a></li>
+                    <li><a href="#product-details">Detail Produk</a></li>
+                    <li><a href="#size-chart">Size Chart</a></li>
+                    <li><a href="#price-list">Harga</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+<!-- Order Process Section -->
+  <section class="order-process" id="order-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>How to Order</h2>
+            </div>
+
+            <div class="process-flow-container">
+                <div class="process-zigzag">
+                    <!-- Row 1 -->
+                    <div class="process-row">
+                        <!-- Step 1 -->
+                        <div class="process-content">
+                            <div class="process-number">1</div>
+                            <div class="process-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/>
+                                </svg>
+                            </div>
+                            <h3>Konsultasi</h3>
+                            <p>Sharing konsep yang diinginkan dan kami akan memberikan list harga.</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="process-content">
+                            <div class="process-number">2</div>
+                            <div class="process-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M16 13H15V7H16V13M8 13H7V7H8V13M16.9 6C16.9 4.3 18.3 3 20 3V5C19.4 5 19 5.4 19 6V18C19 19.7 17.7 21 16 21S13 19.7 13 18V16H11V18C11 19.7 9.7 21 8 21S5 19.7 5 18V6C5.6 6 6 5.6 6 5V3C7.7 3 9.1 4.3 9.1 6H14.9V6.1M8 5C7.4 5 7 5.4 7 6S7.4 7 8 7 9 6.6 9 6 8.6 5 8 5M16 5C15.4 5 15 5.4 15 6S15.4 7 16 7 17 6.6 17 6 16.6 5 16 5Z"/>
+                                </svg>
+                            </div>
+                            <h3>Persetujuan Desain</h3>
+                            <p>Kami akan mengirimkan fixasi desain dan jumlah untuk produk yang akan dibuat, detail teknis produksi sebelum mengerjakan masal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="process-row">
+                        <!-- Step 3 -->
+                        <div class="process-content">
+                            <div class="process-number">3</div>
+                            <div class="process-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z"/>
+                                </svg>
+                            </div>
+                            <h3>Pembayaran Uang Muka</h3>
+                            <p>Setelah harga disepakati, kami akan memberikan nota atau invoice dan akan memproses pesanan setelah pembayaran uang muka.</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="process-content">
+                            <div class="process-number">4</div>
+                            <div class="process-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                                </svg>
+                            </div>
+                            <h3>Proses Produksi</h3>
+                            <p>Star.Id akan merealisasikan pesanan sesuai dengan kesepakatan desain dan jumlah produk yang telah disepakati. Proses produksi akan dikerjakan paling cepat 3 hari tergantung jumlah dan jenis barang yang dipesan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 (centered) -->
+                    <div class="process-row last-row">
+                        <!-- Step 5 -->
+                        <div class="process-content">
+                            <div class="process-number">5</div>
+                            <div class="process-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5C3.9,3 3,3.9 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.9 20.1,3 19,3M12,3C12.55,3 13,3.45 13,4C13,4.55 12.55,5 12,5C11.45,5 11,4.55 11,4C11,3.45 11.45,3 12,3M7,7H17V5H19V19H5V5H7V7Z"/>
+                                </svg>
+                            </div>
+                            <h3>Pelunasan dan Pengambilan/Pengiriman</h3>
+                            <p>Setelah melakukan pelunasan, barang bisa diambil atau bisa dikirimkan melalui jasa ekspedisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Package Section -->
+<section class="section packages" id="packages">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Paket Merchandise</h2>
+        </div>
+        <div class="packages-container">
+            <div class="package-card" data-aos="fade-up">
+                <div class="package-header">
+                    <h3>Paket Luxury Star A</h3>
+                    <div class="package-price">IDR 173K</div>
+                </div>
+                <div class="package-content">
+                    <ul class="package-items">
+                        <li><i class="fas fa-tshirt"></i> Kaos Cotton Combed 24S</li>
+                        <li><i class="fas fa-shopping-bag"></i> Totebag Canvas</li>
+                        <li><i class="fas fa-mug-hot"></i> Tumbler Stainless Steel</li>
+                        <li><i class="fas fa-sticky-note"></i> Stiker</li>
+                        <li><i class="fas fa-key"></i> Gantungan Kunci</li>
+                    </ul>
+                    <a href="#contact" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="package-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="package-header">
+                    <h3>Paket Luxury Star B</h3>
+                    <div class="package-price">IDR 142K</div>
+                </div>
+                <div class="package-content">
+                    <ul class="package-items">
+                        <li><i class="fas fa-tshirt"></i> Kaos Cotton Combed 24S</li>
+                        <li><i class="fas fa-mug-hot"></i> Tumbler Stainless Steel</li>
+                        <li><i class="fas fa-key"></i> Gantungan Kunci</li>
+                        <li><i class="fas fa-sticky-note"></i> Stiker (2 jenis)</li>
+                    </ul>
+                    <a href="#contact" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="package-header">
+                    <h3>Paket Luxury Star C</h3>
+                    <div class="package-price">IDR 99K</div>
+                </div>
+                <div class="package-content">
+                    <ul class="package-items">
+                        <li><i class="fas fa-tshirt"></i> Kaos Cotton Combed 24S</li>
+                        <li><i class="fas fa-shopping-bag"></i> Totebag Canvas</li>
+                        <li><i class="fas fa-key"></i> Gantungan Kunci</li>
+                        <li><i class="fas fa-sticky-note"></i> Stiker (2 jenis)</li>
+                    </ul>
+                    <a href="#contact" class="btn">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="more-packages text-center mt-30" data-aos="fade-up">
+            <p>Tersedia juga <strong>Paket Ordinary Star</strong> dengan harga mulai dari IDR 45K, <strong>Paket Seminar Kit</strong> mulai dari IDR 15K, serta <strong>Paket Event dan Organisasi</strong>.</p>
+            <a href="#contact" class="btn">Tanyakan Paket Lainnya</a>
+        </div>
+    </div>
+</section>
+
+<!-- Product Detail Section -->
+<section class="section product-details" id="product-details">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Detail Produk</h2>
+        </div>
+        
+        <div class="product-detail-tabs">
+            <div class="tab-buttons" data-aos="fade-up">
+                <button class="tab-btn active" data-tab="tab1">Seragam</button>
+                <button class="tab-btn" data-tab="tab2">Kaos & Polo</button>
+                <button class="tab-btn" data-tab="tab3">Jaket & Totebag</button>
+                <button class="tab-btn" data-tab="tab4">Merchandise</button>
+            </div>
+            
+            <div class="tab-content" data-aos="fade-up">
+                <div class="tab-pane active" id="tab1">
+                    <h3>PDH/PDL/Jas</h3>
+                    <div class="material-list">
+                        <div class="material-item">
+                            <h4>American Drill</h4>
+                            <p>Kain drill yang memiliki ukuran serat sedang. Sehingga kain ini juga memiliki ketebalan sedang. Selain itu, kain ini juga memiliki tekstur yang lembut.</p>
+                        </div>
+                        <div class="material-item">
+                            <h4>Japan Drill</h4>
+                            <p>Tergolong drill yang paling tebal karena memiliki serat yang lebih besar. Meskipun tebal kain ini mampu memberikan kenyamanan pada saat digunakan yaitu adem dikulit dan lembut.</p>
+                        </div>
+                        <div class="material-item">
+                            <h4>Nagata Drill</h4>
+                            <p>Kain yang memiliki kualitas yang tinggi serta memiliki ukuran lebih stabil dari lipatan dan penyusutannya. Adapun kelebihan dari nagata drill diantaranya yaitu warna lebih awet dan tidak mudah pudar. Memiliki kandungan bahan katun yang tinggi.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="tab2">
+                    <div class="material-list">
+                        <div class="material-item">
+                            <h4>Kaos Cotton Combed 24s</h4>
+                            <ul>
+                                <li>Tidak mudah kusut</li>
+                                <li>Tidak mudah luntur</li>
+                                <li>Dapat menyerap keringat</li>
+                                <li>Berat kain sebesar 175-185 gsm</li>
+                                <li>Nyaman digunakan, lebih ringan dan lebih adem</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Kaos Cotton Combed 30s</h4>
+                            <ul>
+                                <li>Berat kain sebesar 140-150 gsm</li>
+                                <li>Tekstur bahan halus</li>
+                                <li>Durabilitas sangat baik</li>
+                                <li>Tidak kaku</li>
+                                <li>Daya serap tinggi</li>
+                                <li>Warna anti luntur</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Kaos Polo Lacoste PE</h4>
+                            <ul>
+                                <li>Terbuat dari 100% polyester</li>
+                                <li>Memiliki tekstur berpori</li>
+                                <li>Memiliki handfeel yang halus dan lembut</li>
+                                <li>Tidak membuat gerah</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Kaos Polo CVC</h4>
+                            <ul>
+                                <li>Terbuat dari campuran cotton dan polyester</li>
+                                <li>Memiliki bahan yang halus</li>
+                                <li>Memiliki daya serap tinggi</li>
+                                <li>Memiliki tekstur tidak berpori</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="tab3">
+                    <div class="material-list">
+                        <div class="material-item">
+                            <h4>Jaket & Sweater</h4>
+                            <ul>
+                                <li>Memiliki tekstur yang kuat dan tebal</li>
+                                <li>Tidak mudah robek dan tidak mudah rusak</li>
+                                <li>Tidak mudah kusut</li>
+                                <li>Karakteristik bahan yang mudah dibersihkan</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Totebag Blacu</h4>
+                            <ul>
+                                <li>Terbuat dari kapas yang sudah ditenun</li>
+                                <li>Tekstur relatif lebih kasar karena serat-serat yang ada di permukaan</li>
+                                <li>Daya tahan kuat</li>
+                                <li>Warna tidak mudah luntur</li>
+                                <li>Awet dan tidak mudah sobek</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Totebag Canvas</h4>
+                            <ul>
+                                <li>Memiliki ketebalan yang cukup tinggi</li>
+                                <li>Tekstur lebih halus</li>
+                                <li>Tidak mudah rusak dan tahan lama</li>
+                                <li>Berbahan ringan dan tidak keras</li>
+                                <li>Memiliki serat yang kuat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane" id="tab4">
+                    <div class="material-list">
+                        <div class="material-item">
+                            <h4>Gantungan Kunci</h4>
+                            <ul>
+                                <li>Terbuat dari bahan plastik yang berkualitas</li>
+                                <li>Bisa custom</li>
+                                <li>Terdapat model satu dan dua sisi</li>
+                                <li>Tersedia ukuran 4,4 dan 5,8 cm</li>
+                                <li>Minimal order 10 pcs</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Tumbler</h4>
+                            <ul>
+                                <li>Tersedia bahan plastik dan stainless steel</li>
+                                <li>Praktis dan ringan</li>
+                                <li>Mudah dibersihkan</li>
+                                <li>Memiliki beragam pilihan warna</li>
+                            </ul>
+                        </div>
+                        <div class="material-item">
+                            <h4>Stiker (Vinyl)</h4>
+                            <ul>
+                                <li>Berbahan dasar plastik</li>
+                                <li>Memiliki permukaan halus dan mengkilap</li>
+                                <li>Tahan akan air</li>
+                                <li>Tidak mudah sobek</li>
+                                <li>Tahan panas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Size Chart Section -->
+<section class="section size-chart" id="size-chart">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Size Chart</h2>
+        </div>
+        
+        <div class="size-tabs" data-aos="fade-up">
+            <button class="size-tab active" data-chart="jas">Jas Almamater</button>
+            <button class="size-tab" data-chart="jaket">Jaket</button>
+            <button class="size-tab" data-chart="kaos">Kaos</button>
+            <button class="size-tab" data-chart="totebag">Totebag</button>
+        </div>
+        
+        <div class="size-charts" data-aos="fade-up">
+            <div class="chart active" id="jas-chart">
+                <div class="table-responsive">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                                <th>XL</th>
+                                <th>2XL</th>
+                                <th>3XL</th>
+                                <th>4XL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lebar (cm)</td>
+                                <td>51</td>
+                                <td>53</td>
+                                <td>55</td>
+                                <td>57</td>
+                                <td>60</td>
+                                <td>62</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>Panjang (cm)</td>
+                                <td>68</td>
+                                <td>70</td>
+                                <td>72</td>
+                                <td>74</td>
+                                <td>78</td>
+                                <td>80</td>
+                                <td>82</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="chart" id="jaket-chart">
+                <div class="table-responsive">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                                <th>XL</th>
+                                <th>2XL</th>
+                                <th>3XL</th>
+                                <th>4XL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lebar (cm)</td>
+                                <td>49</td>
+                                <td>51</td>
+                                <td>53</td>
+                                <td>55</td>
+                                <td>58</td>
+                                <td>61</td>
+                                <td>64</td>
+                            </tr>
+                            <tr>
+                                <td>Panjang (cm)</td>
+                                <td>68</td>
+                                <td>70</td>
+                                <td>72</td>
+                                <td>74</td>
+                                <td>78</td>
+                                <td>80</td>
+                                <td>82</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="chart" id="kaos-chart">
+                <div class="table-responsive">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>XS</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                                <th>XL</th>
+                                <th>2XL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lebar (cm)</td>
+                                <td>44</td>
+                                <td>46</td>
+                                <td>49</td>
+                                <td>52</td>
+                                <td>55</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Panjang (cm)</td>
+                                <td>64</td>
+                                <td>67</td>
+                                <td>69</td>
+                                <td>72</td>
+                                <td>75</td>
+                                <td>78</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="chart" id="totebag-chart">
+                <div class="table-responsive">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Tipe</th>
+                                <th>Polos 1</th>
+                                <th>Polos 2</th>
+                                <th>Polos 3</th>
+                                <th>Custom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lebar (cm)</td>
+                                <td>25</td>
+                                <td>30</td>
+                                <td>35</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>Tinggi (cm)</td>
+                                <td>30</td>
+                                <td>40</td>
+                                <td>40</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Panjang Tali (cm)</td>
+                                <td>50</td>
+                                <td>60</td>
+                                <td>60</td>
+                                <td>50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section price-list" id="price-list">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Daftar Harga</h2>
+        </div>
+        
+        <div class="price-tabs" data-aos="fade-up">
+            <button class="price-tab active" data-price="seragam">Seragam</button>
+            <button class="price-tab" data-price="jaket">Jaket & Sweater</button>
+            <button class="price-tab" data-price="kaos">Kaos & Polo</button>
+            <button class="price-tab" data-price="merchandise">Merchandise</button>
+        </div>
+        
+        <div class="price-tables" data-aos="fade-up">
+            <div class="price-table active" id="seragam-price">
+                <h3>PDH, PDL, & Jas</h3>
+                <div class="table-responsive">
+                    <table class="price-table-content">
+                        <thead>
+                            <tr>
+                                <th>Bahan</th>
+                                <th>Jumlah</th>
+                                <th>Harga Satuan</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5">American Drill</td>
+                                <td>5-11 pcs</td>
+                                <td>IDR 150K</td>
+                                <td rowspan="5">Max. 4 titik bordir<br>1 warna (tanpa kombinasi)</td>
+                            </tr>
+                            <tr>
+                                <td>12-50 pcs</td>
+                                <td>IDR 140K</td>
+                            </tr>
+                            <tr>
+                                <td>51-100 pcs</td>
+                                <td>IDR 135K</td>
+                            </tr>
+                            <tr>
+                                <td>101-150 pcs</td>
+                                <td>IDR 130K</td>
+                            </tr>
+                            <tr>
+                                <td>> 150 pcs</td>
+                                <td>Diskusi lebih lanjut</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5">Japan Drill</td>
+                                <td>5-11 pcs</td>
+                                <td>IDR 155K</td>
+                                <td rowspan="5">Max. 4 titik bordir<br>1 warna (tanpa kombinasi)</td>
+                            </tr>
+                            <tr>
+                                <td>12-50 pcs</td>
+                                <td>IDR 150K</td>
+                            </tr>
+                            <tr>
+                                <td>51-100 pcs</td>
+                                <td>IDR 145K</td>
+                            </tr>
+                            <tr>
+                                <td>101-150 pcs</td>
+                                <td>IDR 135K</td>
+                            </tr>
+                            <tr>
+                                <td>> 150 pcs</td>
+                                <td>Diskusi lebih lanjut</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="price-note mt-15">
+                    <p><i class="fas fa-info-circle"></i> Juga tersedia dengan bahan Nagata Drill. Hubungi kami untuk informasi lebih lanjut.</p>
+                </div>
+            </div>
+            
+            <div class="price-table" id="jaket-price">
+                <h3>Jaket & Sweater</h3>
+                <div class="table-responsive">
+                    <table class="price-table-content">
+                        <thead>
+                            <tr>
+                                <th>Bahan</th>
+                                <th>Jumlah</th>
+                                <th>Harga Satuan</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">Canva, Fleece, Taslan, Ripstok</td>
+                                <td>12-23 pcs</td>
+                                <td>IDR 200K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>24-50 pcs</td>
+                                <td>IDR 190K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 185K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>> 110 pcs</td>
+                                <td>IDR 180K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Drill</td>
+                                <td>12-23 pcs</td>
+                                <td>IDR 180K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>24-50 pcs</td>
+                                <td>IDR 170K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 165K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>> 110 pcs</td>
+                                <td>IDR 160K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="price-table" id="kaos-price">
+                <h3>Kaos & Polo</h3>
+                <div class="table-responsive">
+                    <table class="price-table-content">
+                        <thead>
+                            <tr>
+                                <th>Jenis</th>
+                                <th>Jumlah</th>
+                                <th>Harga Satuan</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">Cotton Combed 24s</td>
+                                <td>12-50 pcs</td>
+                                <td>IDR 75K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>111-200 pcs</td>
+                                <td>IDR 68K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>> 200 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Cotton Combed 30s</td>
+                                <td>12-50 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>111-200 pcs</td>
+                                <td>IDR 63K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>> 200 pcs</td>
+                                <td>IDR 60K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Polo Lacoste PE</td>
+                                <td>12-23 pcs</td>
+                                <td>IDR 75K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>24-50 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 68K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>> 110 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             <div class="price-table" id="merchandise-price">
+                <h3>Merchandise</h3>
+                <div class="table-responsive">
+                    <table class="price-table-content">
+                        <thead>
+                            <tr>
+                                <th>Jenis</th>
+                                <th>Jumlah</th>
+                                <th>Harga Satuan</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">Cotton Combed 24s</td>
+                                <td>12-50 pcs</td>
+                                <td>IDR 75K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>111-200 pcs</td>
+                                <td>IDR 68K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>> 200 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Cotton Combed 30s</td>
+                                <td>12-50 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>111-200 pcs</td>
+                                <td>IDR 63K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td>> 200 pcs</td>
+                                <td>IDR 60K</td>
+                                <td>Plastisol/DTF</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4">Polo Lacoste PE</td>
+                                <td>12-23 pcs</td>
+                                <td>IDR 75K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>24-50 pcs</td>
+                                <td>IDR 70K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>51-110 pcs</td>
+                                <td>IDR 68K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                            <tr>
+                                <td>> 110 pcs</td>
+                                <td>IDR 65K</td>
+                                <td>Maks. 4 titik bordir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>     
+        </div>
+    </div>
+        </div>
+    </div>
+</section>
+</body>
+<!-- Price List Section -->
+ 
+<footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Star.ID Konveksi</h3>
+                    <p>"Harga Merakyat, Kualitas No Debat"</p>
+                    <p>Star.ID Konveksi adalah perusahaan konveksi terpercaya di Semarang yang menyediakan berbagai produk tekstil custom dengan kualitas terbaik.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/starindo.konveksi/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linktr.ee/star.id" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-link"></i>
+                        </a>
+                        <a href="https://wa.me/+6289516813456" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+         
+                </div>
+                <div class="footer-column">
+                    <h3>Produk Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Seragam (PDH, PDL, Jas)</a></li>
+                        <li><a href="#">Kaos (Cotton Combed 24s & 30s)</a></li>
+                        <li><a href="#">Kaos Polo (Lacoste PE, CVC)</a></li>
+                        <li><a href="#">Totebag (Canvas & Blacu)</a></li>
+                        <li><a href="#">Merchandise Lainnya</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Paket Seminar Kit & Event</a></li>
+                        <li><a href="#services">Paket Organisasi</a></li>
+                        <li><a href="#services">Open Sponsorship</a></li>
+                        <li><a href="#services">Free Ongkir Semarang</a></li>
+                        <li><a href="#services">Konsultasi Desain</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak Kami</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Jl. Raya Patemon, Gg. Kp. Gudangan No. 17, Kel. Patemon, Kec. Gunungpati, Kota Semarang</a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i> 0895 1681 3456</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @starindo.konveksi</a></li>
+                        <li><a href="#"><i class="fas fa-link"></i> linktr.ee/star.id</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Star.ID Konveksi. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>  
