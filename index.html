@@ -9,7 +9,15 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<style>
+    :root {
+    --primary-color: #FF7A00;
+    --secondary-color: #FFB74D;
+    --light-color: #FFF3E0;
+    --dark-color: #333333;
+    --white-color: #FFFFFF;
+}
+</style>
   <script>
     AOS.init({
       duration: 1000, 
@@ -19,16 +27,16 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+       <header id="originalHeader">
         <div class="container header-container">
-            <div class="logo">
+            <div class="logo" id="logoContainer">
                 <div class="logo-image">
                     <img src="assets/logo-removebg-preview2.png" alt="Star.ID Icon">
                 </div>
             </div>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#hero">Beranda</a></li>
                     <li><a href="#about">Tentang Kami</a></li>
                     <li><a href="#products">Produk</a></li>
                     <li><a href="#services">Layanan</a></li>
@@ -38,12 +46,39 @@
                 <button class="hamburger" id="hamburger">
                     <i class="fas fa-bars"></i>
                 </button>
+                
             </nav>
         </div>
     </header>
 
+    <!-- Floating Navbar -->
+    <nav class="floating-navbar" id="floatingNavbar">
+        <ul class="floating-nav-menu">
+            <li class="floating-nav-item active" data-tooltip="Beranda">
+                <a href="#hero"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="floating-nav-item" data-tooltip="Tentang Kami">
+                <a href="#about"><i class="fas fa-user"></i></a>
+            </li>
+            <li class="floating-nav-item" data-tooltip="Produk">
+                <a href="#products"><i class="fas fa-box"></i></a>
+            </li>
+            <li class="floating-nav-item" data-tooltip="Layanan">
+                <a href="#services"><i class="fas fa-cogs"></i></a>
+            </li>
+            <li class="floating-nav-item" data-tooltip="Kontak">
+                <a href="#contact"><i class="fas fa-envelope"></i></a>
+            </li>
+            <li class="floating-nav-item" data-tooltip="Katalog">
+                <a href="portofolio.html"><i class="fas fa-images"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+ 
+
     <!-- Hero Section -->
-  <section class="hero" id="home" data-aos="fade-up">
+  <section class="hero" id="hero" data-aos="fade-up">
   <div class="hero-container">
     <div class="hero-content">
       <h2>
@@ -155,7 +190,7 @@
     <section class="section about" id="about">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Tentang Kami</h2>
+                <h2 style="color: var(--primary-color);">Tentang Kami</h2>
             </div>
             <div class="about-content">
                 <div class="about-img" data-aos="fade-right">
@@ -175,7 +210,7 @@
     <section class="section vision-mission" id="vision-mission">
         <div class="container">
             <div class="section-title" data-aos="fade-up">
-                <h2>Visi & Misi</h2>
+                <h2 style="color: var(--primary-color);">Visi & Misi</h2>
             </div>
             <div class="vision-mission-container">
                 <div class="vision-box" data-aos="fade-right">
@@ -195,64 +230,86 @@
     </section>
 
     <!-- Products Section -->
-    <section class="section products" id="products" data-aos="fade-up">
-        <div class="container">
-            <div class="section-title">
-                <h2>Produk Kami</h2>
-            </div>
-            <div class="product-categories">
-                <div class="product-card">
-                    <div class="product-img">
+<section class="section products" id="products" data-aos="fade-up">
+    <div class="container">
+        <div class="section-title">
+            <h2 style="color: var(--primary-color);">Produk Kami</h2>
+        </div>
+        <div class="product-list">
+            <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-content">
+                    <div class="product-info">
+                        <h3 class="product-title">Seragam</h3>
+                        <p class="product-description">PDH, PDL, Jas dengan kualitas terbaik untuk berbagai kebutuhan</p>
+                    </div>
+                    <div class="product-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popup-image">
                         <img src="assets/jas.jpg" alt="Seragam">
                     </div>
+                </div>
+            </div>
+
+            <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-content">
                     <div class="product-info">
-                        <h3>Seragam</h3>
-                        <p>PDH, PDL, Jas dengan kualitas terbaik untuk berbagai kebutuhan.</p>
-                        <a href="#contact" class="btn">Pesan Sekarang</a>
+                        <h3 class="product-title">Kaos</h3>
+                        <p class="product-description">Cotton Combed 24s & 30s dengan desain sesuai keinginan Anda</p>
+                    </div>
+                    <div class="product-arrow">
+                          <i class="fas fa-arrow-right"></i>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img">
+                <div class="product-popup">
+                    <div class="popup-image">
                         <img src="assets/kais.jpg" alt="Kaos">
                     </div>
-                    <div class="product-info">
-                        <h3>Kaos</h3>
-                        <p>Cotton Combed 24s & 30s dengan desain sesuai keinginan Anda.</p>
-                        <a href="#contact" class="btn">Pesan Sekarang</a>
-                    </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img">
+            </div>
+
+            <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-content">
+                    <div class="product-info">
+                        <h3 class="product-title">Kaos Polo</h3>
+                        <p class="product-description">Tersedia dalam bahan Lacoste PE dan CVC berkualitas tinggi</p>
+                    </div>
+                    <div class="product-arrow">  <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="product-popup">
+                    <div class="popup-image">
                         <img src="assets/polo.jpg" alt="Kaos Polo">
                     </div>
-                    <div class="product-info">
-                        <h3>Kaos Polo</h3>
-                        <p>Tersedia dalam bahan Lacoste PE dan CVC berkualitas tinggi.</p>
-                        <a href="#contact" class="btn">Pesan Sekarang</a>
-                    </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="assets/totebag.jpg" alt="Totebag">
-                    </div>
+            </div>
+
+            <div class="product-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-content">
                     <div class="product-info">
-                        <h3>Totebag</h3>
-                        <p>Tersedia dalam bahan Canvas & Blacu dengan berbagai ukuran.</p>
-                        <a href="#contact" class="btn">Pesan Sekarang</a>
+                        <h3 class="product-title">Totebag</h3>
+                        <p class="product-description">Tersedia dalam bahan Canvas & Blacu dengan berbagai ukuran</p>
+                    </div>
+                    <div class="product-arrow">  <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="product-popup">
+                    <div class="popup-image">
+                        <img src="assets/totebag.jpg" alt="Totebag">
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Advantages Section -->
-    <section class="section advantages" id="advantages">
+     <section class="section advantages" id="advantages">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Keunggulan Kami</h2>
+            <div class="section-title">
+                <h2 >Keunggulan Kami</h2>
             </div>
             <div class="advantages-container">
-                <div class="advantage-card" >
+                <div class="advantage-card">
                     <div class="advantage-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
@@ -301,37 +358,48 @@
     <!-- Services Section -->
     <section class="section services" id="services">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Layanan Khusus</h2>
+            <div class="section-title">
+                <h2 style="color: var(--primary-color);">Layanan Khusus</h2>
             </div>
             <div class="services-container">
-                <div class="service-card" >
-                    <div class="service-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Paket Seminar Kit & Event</h3>
-                    <p>Solusi lengkap untuk kebutuhan seminar dan event Anda.</p>
-                </div>
-                <div class="service-card" >
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Paket Organisasi</h3>
-                    <p>Kaos, ID Card, Jas dan kebutuhan organisasi lainnya.</p>
-                </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-percentage"></i>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Paket Seminar Kit & Event</h3>
+                        <p>Solusi lengkap untuk kebutuhan seminar dan event Anda dengan kualitas terbaik.</p>
                     </div>
-                    <h3>Open Sponsorship</h3>
-                    <p>Dapatkan cashback, diskon, dan promosi media sosial.</p>
                 </div>
-                <div class="service-card" >
-                    <div class="service-icon">
-                        <i class="fas fa-truck"></i>
+
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Paket Organisasi</h3>
+                        <p>Kaos, ID Card, Jas dan kebutuhan organisasi lainnya dengan desain custom.</p>
                     </div>
-                    <h3>Free Ongkir</h3>
-                    <p>Gratis ongkos kirim untuk wilayah Semarang, diskon untuk wilayah lain.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <h3>Open Sponsorship</h3>
+                        <p>Dapatkan cashback, diskon, dan promosi media sosial untuk event Anda.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Free Ongkir</h3>
+                        <p>Gratis ongkos kirim untuk wilayah Semarang, diskon khusus untuk wilayah lain.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -341,93 +409,120 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Hubungi Kami</h2>
+                <h2 style="color: var(--white-color);">Hubungi Kami</h2>
             </div>
             <div class="contact-container">
+                <!-- Contact Information -->
                 <div class="contact-info">
-                    <div class="contact-card">
-                        <h3>Informasi Kontak</h3>
-                        <ul class="contact-details">
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    Jl. Raya Patemon, Gg. Kp. Gudangan No. 17, Kel. Patemon, Kec. Gunungpati, Kota Semarang, Jawa Tengah
-                                </div>
+                    <h3>
+                        <i class="fas fa-address-book"></i>
+                        Informasi Kontak
+                    </h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-title">WhatsApp Business</div>
+                                <div class="contact-item-text">0895 1681 3456</div>
+                            </div>
+                            <div class="contact-item-date">Online</div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-title">Instagram</div>
+                                <div class="contact-item-text">@starindo.konveksi</div>
+                            </div>
+                            <div class="contact-item-date">Active</div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-title">Alamat Lengkap</div>
+                                <div class="contact-item-text">Jl. Raya Patemon, Gg. Kp. Gudangan No. 17, Gunungpati, Semarang</div>
+                            </div>
+                            <div class="contact-item-date">Semarang</div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="contact-item-content">
+                                <div class="contact-item-title">Link Tree</div>
+                                <div class="contact-item-text">linktr.ee/star.id</div>
+                            </div>
+                            <div class="contact-item-date">Available</div>
+                        </li>
+                    </ul>
+
+                    <!-- Operating Hours -->
+                    <div class="operating-hours">
+                        <h4>
+                            <i class="fas fa-clock"></i>
+                            Jam Operasional
+                        </h4>
+                        <ul class="hours-list">
+                            <li class="hours-item">
+                                <span class="hours-day">Senin - Jumat</span>
+                                <span class="hours-time">08.00 - 17.00</span>
                             </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="contact-text">
-                                    0895 1681 3456
-                                </div>
+                            <li class="hours-item">
+                                <span class="hours-day">Sabtu</span>
+                                <span class="hours-time">08.00 - 15.00</span>
                             </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <div class="contact-text">
-                                    @starindo.konveksi
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-link"></i>
-                                </div>
-                                <div class="contact-text">
-                                    linktr.ee/star.id
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Jam Operasional</h3>
-                        <ul class="contact-details">
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    Senin - Jumat: 08.00 - 17.00
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    Sabtu: 08.00 - 15.00
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    Minggu & Hari Libur: Tutup
-                                </div>
+                            <li class="hours-item">
+                                <span class="hours-day">Minggu</span>
+                                <span class="hours-time">Tutup</span>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <!-- Contact Form -->
                 <div class="contact-form">
-                    <h3>Kirim Pesan</h3>
-                    <form>
+                    <h3>
+                        <i class="fas fa-paper-plane"></i>
+                        Kirim Pesan
+                    </h3>
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        Pesan berhasil dikirim! Kami akan segera menghubungi Anda.
+                    </div>
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nama Lengkap">
+                            <label class="form-label">Nama Lengkap *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Masukkan nama lengkap Anda" required>
+                            <div class="error-message" id="fullNameError">Nama lengkap harus diisi</div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="email" placeholder="contoh@email.com" required>
+                            <div class="error-message" id="emailError">Email tidak valid</div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nomor Telepon">
+                            <label class="form-label">Nomor Telepon</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="08xx xxxx xxxx">
+                            <div class="error-message" id="phoneError">Format nomor telepon tidak valid</div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Pesan Anda"></textarea>
+                            <label class="form-label">Subjek</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Perihal pesan Anda">
                         </div>
-                        <button type="submit" class="btn-submit">Kirim Pesan</button>
+                        <div class="form-group">
+                            <label class="form-label">Pesan *</label>
+                            <textarea class="form-control" id="message" placeholder="Tulis pesan Anda disini..." required></textarea>
+                            <div class="error-message" id="messageError">Pesan harus diisi minimal 10 karakter</div>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
                     </form>
                 </div>
             </div>
@@ -491,3 +586,4 @@
             </div>
         </div>
     </footer>  
+    <script src="script.js"></script>
