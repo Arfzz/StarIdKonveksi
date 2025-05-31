@@ -1,0 +1,268 @@
+{
+  "priceList": [
+    {
+      "id": "seragam",
+      "tabTitle": "Seragam",
+      "tabIcon": "fas fa-user-tie",
+      "tableTitle": "PDH, PDL, & Jas",
+      "categories": [
+        {
+          "name": "American Drill",
+          "items": [
+            {
+              "quantity": "5-11 pcs",
+              "price": "IDR 150K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "12-50 pcs",
+              "price": "IDR 140K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "51-100 pcs",
+              "price": "IDR 135K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "101-150 pcs",
+              "price": "IDR 130K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "> 150 pcs",
+              "price": "Diskusi lebih lanjut",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            }
+          ]
+        },
+        {
+          "name": "Japan Drill",
+          "items": [
+            {
+              "quantity": "5-11 pcs",
+              "price": "IDR 155K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "12-50 pcs",
+              "price": "IDR 150K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "51-100 pcs",
+              "price": "IDR 145K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "101-150 pcs",
+              "price": "IDR 135K",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            },
+            {
+              "quantity": "> 150 pcs",
+              "price": "Diskusi lebih lanjut",
+              "description": "Max. 4 titik bordir<br>1 warna (tanpa kombinasi)"
+            }
+          ]
+        }
+      ],
+      "note": "Juga tersedia dengan bahan Nagata Drill. Hubungi kami untuk informasi lebih lanjut.",
+      "noteIcon": "fas fa-info-circle"
+    },
+    {
+      "id": "jaket",
+      "tabTitle": "Jaket & Sweater",
+      "tabIcon": "fas fa-tshirt",
+      "tableTitle": "Jaket & Sweater",
+      "categories": [
+        {
+          "name": "Canva, Fleece, Taslan, Ripstok",
+          "items": [
+            {
+              "quantity": "12-23 pcs",
+              "price": "IDR 200K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "24-50 pcs",
+              "price": "IDR 190K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "51-110 pcs",
+              "price": "IDR 185K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "> 110 pcs",
+              "price": "IDR 180K",
+              "description": "Maks. 4 titik bordir"
+            }
+          ]
+        },
+        {
+          "name": "Drill",
+          "items": [
+            {
+              "quantity": "12-23 pcs",
+              "price": "IDR 180K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "24-50 pcs",
+              "price": "IDR 170K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "51-110 pcs",
+              "price": "IDR 165K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "> 110 pcs",
+              "price": "IDR 160K",
+              "description": "Maks. 4 titik bordir"
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "kaos",
+      "tabTitle": "Kaos & Polo",
+      "tabIcon": "fas fa-shirt",
+      "tableTitle": "Kaos & Polo",
+      "categories": [
+        {
+          "name": "Cotton Combed 24s",
+          "items": [
+            {
+              "quantity": "12-50 pcs",
+              "price": "IDR 75K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "51-110 pcs",
+              "price": "IDR 70K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "111-200 pcs",
+              "price": "IDR 68K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "> 200 pcs",
+              "price": "IDR 65K",
+              "description": "Plastisol/DTF"
+            }
+          ]
+        },
+        {
+          "name": "Cotton Combed 30s",
+          "items": [
+            {
+              "quantity": "12-50 pcs",
+              "price": "IDR 70K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "51-110 pcs",
+              "price": "IDR 65K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "111-200 pcs",
+              "price": "IDR 63K",
+              "description": "Plastisol/DTF"
+            },
+            {
+              "quantity": "> 200 pcs",
+              "price": "IDR 60K",
+              "description": "Plastisol/DTF"
+            }
+          ]
+        },
+        {
+          "name": "Polo Lacoste PE",
+          "items": [
+            {
+              "quantity": "12-23 pcs",
+              "price": "IDR 75K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "24-50 pcs",
+              "price": "IDR 70K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "51-110 pcs",
+              "price": "IDR 68K",
+              "description": "Maks. 4 titik bordir"
+            },
+            {
+              "quantity": "> 110 pcs",
+              "price": "IDR 65K",
+              "description": "Maks. 4 titik bordir"
+            }
+          ]
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "merchandise",
+      "tabTitle": "Merchandise",
+      "tabIcon": "fas fa-gift",
+      "tableTitle": "Totebag",
+      "merchandiseTypes": [
+        {
+          "name": "Blacu",
+          "icon": "fas fa-shopping-bag",
+          "items": [
+            {
+              "quantity": "< 50 pcs",
+              "note": "Sublima/DTF",
+              "price": "IDR 18K"
+            },
+            {
+              "quantity": "51 - 110 pcs",
+              "note": "Sublima/DTF",
+              "price": "IDR 15K"
+            },
+            {
+              "quantity": "> 110 pcs",
+              "note": "Sublima/DTF",
+              "price": "IDR 13K"
+            }
+          ]
+        },
+        {
+          "name": "Canvas",
+          "icon": "fas fa-paint-brush",
+          "items": [
+            {
+              "quantity": "> 50 pcs",  
+              "note": "Sublima/DTF",
+              "price": "IDR 45K"
+            },
+            {
+              "quantity": "51 - 110 pcs",
+              "note": "Sublima/DTF",
+              "price": "IDR 33K"
+            },
+            {
+              "quantity": "> 110 pcs",
+              "note": "Sublima/DTF",
+              "price": "IDR 30K"
+            }
+          ]
+        }
+      ],
+      "note": null
+    }
+  ]
+}
