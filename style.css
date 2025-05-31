@@ -1583,13 +1583,13 @@ background-color: white;
         }
 
         .contact-item-text {
-            color: var(--gray-color);
+            color: black;
             font-size: 0.9rem;
             line-height: 1.4;
         }
 
         .contact-item-date {
-            color: var(--gray-color);
+            color: black;
             font-size: 0.8rem;
             white-space: nowrap;
         }
@@ -1753,7 +1753,7 @@ background-color: white;
         }
 
         .hours-time {
-            color: var(--gray-color);
+            color: black;
         }
 
         /* Success Message */
