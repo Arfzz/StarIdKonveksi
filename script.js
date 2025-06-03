@@ -495,37 +495,152 @@ const priceListData = { // Objek JSON yang sudah kita buat sebelumnya
     // --------------------------------------------------------------------------------
     // 7. FUNGSI UNTUK VALIDASI FORM (jika ada form kontak di halaman)
     // --------------------------------------------------------------------------------
-    const contactForm = document.getElementById('contactForm'); // Ganti dengan ID form Anda
+    const contactSection = document.getElementById('contact'); // Ambil section dengan ID 'contact'
+if (contactSection) {
+    const contactForm = contactSection.querySelector('#contactForm'); // Cari form di dalam section
+    
     if (contactForm) {
-        const submitBtn = contactForm.querySelector('button[type="submit"]'); // Lebih spesifik
-        const successMessage = document.getElementById('successMessage'); // Pastikan ID ini ada
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const successMessage = document.getElementById('successMessage');
 
-        // Fungsi validasi (salin fungsi validateName, validateEmail, dll. Anda ke sini)
-        function validateName(name) { return name.trim().length >= 2; }
-        function validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email); }
-        function validatePhone(phone) { if (phone.trim() === '') return true; const phoneRegex = /^(\+62|62|0)[0-9]{9,12}$/; return phoneRegex.test(phone.replace(/[\s-]/g, '')); }
-        function validateMessage(message) { return message.trim().length >= 10; }
+        // Fungsi validasi
+        function validateName(name) { 
+            return name.trim().length >= 2; 
+        }
+        
+        function validateEmail(email) { 
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            return emailRegex.test(email); 
+        }
+        
+        function validatePhone(phone) { 
+            if (phone.trim() === '') return true; // Optional field
+            const phoneRegex = /^(\+62|62|0)[0-9]{9,12}$/; 
+            return phoneRegex.test(phone.replace(/[\s-]/g, '')); 
+        }
+        
+        function validateMessage(message) { 
+            return message.trim().length >= 10; 
+        }
 
-        function addFieldValidation(fieldId, validationFn, errorId) {
+        // Fungsi untuk menampilkan/menyembunyikan error
+        function showError(fieldId, errorId, message) {
             const field = document.getElementById(fieldId);
             const errorElement = document.getElementById(errorId);
-            if (!field || !errorElement) return; // Lewati jika elemen tidak ada
-
-            field.addEventListener('blur', function() { /* ... logika blur Anda ... */ });
-            field.addEventListener('input', function() { /* ... logika input Anda ... */ });
+            
+            if (field && errorElement) {
+                field.classList.add('error');
+                errorElement.style.display = 'block';
+                errorElement.textContent = message;
+            }
         }
-        // Panggil addFieldValidation untuk setiap field
-        // addFieldValidation('fullName', validateName, 'fullNameError');
-        // ... (dan seterusnya) ...
 
+        function hideError(fieldId, errorId) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(errorId);
+            
+            if (field && errorElement) {
+                field.classList.remove('error');
+                errorElement.style.display = 'none';
+            }
+        }
+
+        // Fungsi validasi field dengan event listener
+        function addFieldValidation(fieldId, validationFn, errorId, errorMessage) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(errorId);
+            
+            if (!field || !errorElement) return;
+
+            // Validasi saat user keluar dari field (blur)
+            field.addEventListener('blur', function() {
+                const value = this.value.trim();
+                if (this.hasAttribute('required') && value === '') {
+                    showError(fieldId, errorId, `${this.previousElementSibling.textContent} harus diisi`);
+                } else if (value !== '' && !validationFn(value)) {
+                    showError(fieldId, errorId, errorMessage);
+                } else {
+                    hideError(fieldId, errorId);
+                }
+            });
+
+            // Validasi saat user mengetik (input)
+            field.addEventListener('input', function() {
+                const value = this.value.trim();
+                if (value !== '' && validationFn(value)) {
+                    hideError(fieldId, errorId);
+                }
+            });
+        }
+
+        // Setup validasi untuk setiap field
+        addFieldValidation('fullName', validateName, 'fullNameError', 'Nama harus minimal 2 karakter');
+        addFieldValidation('email', validateEmail, 'emailError', 'Format email tidak valid');
+        addFieldValidation('phone', validatePhone, 'phoneError', 'Format nomor telepon tidak valid');
+        addFieldValidation('message', validateMessage, 'messageError', 'Pesan harus minimal 10 karakter');
+
+        // Event listener untuk submit form
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // ... (logika submit form Anda, pastikan semua ID elemen (fullName, email, dll.) ada) ...
-            // Contoh:
-            // const fullNameVal = document.getElementById('fullName') ? document.getElementById('fullName').value : '';
-            // ... lakukan hal yang sama untuk field lain ...
+            
+            // Ambil nilai dari semua field
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            let isValid = true;
+
+            // Validasi semua field yang required
+            if (!validateName(fullName)) {
+                showError('fullName', 'fullNameError', 'Nama harus minimal 2 karakter');
+                isValid = false;
+            }
+
+            if (!validateEmail(email)) {
+                showError('email', 'emailError', 'Format email tidak valid');
+                isValid = false;
+            }
+
+            if (phone !== '' && !validatePhone(phone)) {
+                showError('phone', 'phoneError', 'Format nomor telepon tidak valid');
+                isValid = false;
+            }
+
+            if (!validateMessage(message)) {
+                showError('message', 'messageError', 'Pesan harus minimal 10 karakter');
+                isValid = false;
+            }
+
+            // Jika semua validasi berhasil
+            if (isValid) {
+                // Disable submit button dan ubah teks
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+                
+                // Simulasi pengiriman (ganti dengan logika pengiriman sebenarnya)
+                setTimeout(() => {
+                    // Tampilkan pesan sukses
+                    successMessage.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset submit button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Kirim Pesan';
+                    
+                    // Sembunyikan pesan sukses setelah 5 detik
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                    
+                }, 2000); // Simulasi delay 2 detik
+            }
         });
     }
+}
 
     // --------------------------------------------------------------------------------
     // 8. FUNGSI UNTUK DARK MODE TOGGLE (jika ada tombolnya di halaman)

@@ -1688,6 +1688,34 @@ background-color: white;
             background-color: rgba(40, 167, 69, 0.05);
         }
 
+        .success-message {
+    display: none;
+    background: #27ae60;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.success-message i {
+    margin-right: 10px;
+}
+
+/* Loading state untuk submit button */
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
         .error-message {
             color: var(--error-color);
             font-size: 0.8rem;
